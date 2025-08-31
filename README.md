@@ -52,7 +52,10 @@ For each file, check for any # that need replacing
 * Put the contents of `networking/host/iptables.conf` in `/etc/iptables.conf`
 * For each wifi you want to connect to, create a version of  `networking/host/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
-* `networking/host/wpa_supplicant-wlan1.conf` provides an example of how to specify wifi networks to connect to in `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`
+* For the host network, put  the example from `networking/host/WiFiHost.nmconnection` in `/etc/NetworkManager/system-connections`
+  * You **MUST** chmod these to 600 or NetworkManager will ignore them
+
+NetworkManager instead of old stack kinda documented [here](https://raspberrypi.stackexchange.com/a/145594)
 
 #### DHCP
 
@@ -84,9 +87,7 @@ Reboot machine: `sudo shutdown -r now`
 ### Client
 
 * Run `ifconfig` to check you have wlan0
-* Put the contents of `networking/client/wlan0` in `/etc/network/interfaces.d/wlan0`
-* Put the contents of `networking/client/general` in `/etc/network/interfaces.d/general`
-* Replace the two #'s with the SSID and passphrase for your robot's network, and also its static IP number
-* **Append** the contents of `networking/host/dhcpcd.conf` to `/etc/dhcpcd.conf`
+* For each wifi you want to connect to, create a version of  `networking/client/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
+  * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
 Reboot machine: `sudo shutdown -r now`

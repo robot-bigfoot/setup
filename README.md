@@ -16,6 +16,20 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
 
 [Other options](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
 
+## SSH setup
+
+* On some controller machine, create ssh key: `ssh-keygen -t rsa`
+* Copy it to the target machine:
+  * `scp /home/username/.ssh/name_rsa.pub user@ip:/home/username/name_rsa.pub`
+* SSH to the machine and add it to the authorised keys:
+  * If not already there, make the file:
+    * `mkdir  ~/.ssh`
+    * `touch ~/.ssh/authorized_keys`
+  * `cat /home/username/name_rsa.pub >> /home/username/.ssh/authorized_keys
+* Clean up the file in the home directory
+* You may wish to make it the default SSH key on your client / controller device by adding the below to `.ssh/config`:
+  * `IdentityFile /home/username/.ssh/name_rsa`
+
 ## First  boot
 
 * Plug into ethernet and screen

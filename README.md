@@ -55,20 +55,24 @@ For each file, check for any # that need replacing
 * Put the contents of `networking/host/general` in `/etc/network/interfaces.d/general`
 * `networking/host/wpa_supplicant-wlan1.conf` provides an example of how to specify wifi networks to connect to in `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`
 
+#### DHCP
+
 * Install DHCP server: `sudo apt-get install isc-dhcp-server`
 * Put contents of `networking/host/dhcpd.conf` in `/etc/dhcp/dhcpd.conf`
 * Edit `/etc/default/isc-dhcp-server` and set INTERFACESv4="wlan0" and INTERFACESv6="wlan0"
+
+#### Host AP
 
 * Install the AP server: `sudo apt-get install hostapd`
 * Put the contents of `networking/host/hostapd.conf` in `/etc/hostapd/hostapd.conf`
 * Change the # for the passphrase for the network
 * Edit `/etc/default/hostapd` and point DAEMON_CONF to `/etc/hostapd/hostapd.conf`
 * For some reason the service is masked in later raspbians:
-`sudo systemctl unmask hostapd`
-`sudo systemctl enable hostapd`
-`sudo systemctl start hostapd`
+  * `sudo systemctl unmask hostapd`
+  * `sudo systemctl enable hostapd`
+  * `sudo systemctl start hostapd`
 
-* Reboot machine: `sudo shutdown -r now`
+Reboot machine: `sudo shutdown -r now`
 
 [Partial guide](https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software)
 

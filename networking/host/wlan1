@@ -1,4 +1,0 @@
-allow-hotplug wlan1
-iface wlan1 inet manual
-    metric 200
-iface default inet dhcp

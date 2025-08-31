@@ -50,9 +50,8 @@ On all devices, install and set up the Github CLI:
 For each file, check for any # that need replacing
 
 * Put the contents of `networking/host/iptables.conf` in `/etc/iptables.conf`
-* Put the contents of `networking/host/wlan0` in `/etc/network/interfaces.d/wlan0`
-* Put the contents of `networking/host/wlan1` in `/etc/network/interfaces.d/wlan1`
-* Put the contents of `networking/host/general` in `/etc/network/interfaces.d/general`
+* For each wifi you want to connect to, create a version of  `networking/host/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
+  * You **MUST** chmod these to 600 or NetworkManager will ignore them
 * `networking/host/wpa_supplicant-wlan1.conf` provides an example of how to specify wifi networks to connect to in `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`
 
 #### DHCP

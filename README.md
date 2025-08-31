@@ -23,6 +23,7 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
 * Configure other system settings: `sudo raspi-config`
   * Enable SSH
   * Set the hostname to be something sensible
+  * Set the WiFi country to GB to unblock it
   * ([Details](http://www.raspberrypi-spy.co.uk/2012/05/enable-secure-shell-ssh-on-your-raspberry-pi/))
 
 Once network is set up, update and install packages:
@@ -62,17 +63,6 @@ NetworkManager instead of old stack kinda documented [here](https://raspberrypi.
 * Install DHCP server: `sudo apt install isc-dhcp-server`
 * Put contents of `networking/host/dhcpd.conf` in `/etc/dhcp/dhcpd.conf`
 * Edit `/etc/default/isc-dhcp-server` and set INTERFACESv4="wlan0" and INTERFACESv6="wlan0"
-
-#### Host AP
-
-* Install the AP server: `sudo apt install hostapd`
-* Put the contents of `networking/host/hostapd.conf` in `/etc/hostapd/hostapd.conf`
-* Change the # for the passphrase for the network
-* Edit `/etc/default/hostapd` and point DAEMON_CONF to `/etc/hostapd/hostapd.conf`
-* For some reason the service is masked in later raspbians:
-  * `sudo systemctl unmask hostapd`
-  * `sudo systemctl enable hostapd`
-  * `sudo systemctl start hostapd`
 
 Reboot machine: `sudo shutdown -r now`
 

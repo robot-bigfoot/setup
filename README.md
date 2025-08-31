@@ -53,7 +53,6 @@ For each file, check for any # that need replacing
 * Put the contents of `networking/host/wlan0` in `/etc/network/interfaces.d/wlan0`
 * Put the contents of `networking/host/wlan1` in `/etc/network/interfaces.d/wlan1`
 * Put the contents of `networking/host/general` in `/etc/network/interfaces.d/general`
-* **Append** the contents of `networking/host/dhcpcd.conf` to `/etc/dhcpcd.conf`
 * `networking/host/wpa_supplicant-wlan1.conf` provides an example of how to specify wifi networks to connect to in `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`
 
 * Install DHCP server: `sudo apt-get install isc-dhcp-server`

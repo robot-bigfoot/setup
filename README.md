@@ -66,13 +66,7 @@ NetworkManager instead of old stack kinda documented [here](https://raspberrypi.
 
 Reboot machine: `sudo shutdown -r now`
 
-[Partial guide](https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software)
-
-[More](https://raspberrypihq.com/how-to-turn-a-raspberry-pi-into-a-wifi-router/)
-
-[Angry, but helpful](https://tech.scargill.net/pi-zero-wi-fi-automatic-reconnect/)
-
-[Probably the best docs](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
+[raspi-config docs](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 
 ### Client
 

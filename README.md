@@ -90,4 +90,4 @@ Reboot machine: `sudo shutdown -r now`
 * Replace the two #'s with the SSID and passphrase for your robot's network, and also its static IP number
 * **Append** the contents of `networking/host/dhcpcd.conf` to `/etc/dhcpcd.conf`
 
-* Reboot machine: `sudo shutdown -r now`
+Reboot machine: `sudo shutdown -r now`

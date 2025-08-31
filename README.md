@@ -57,13 +57,13 @@ For each file, check for any # that need replacing
 
 #### DHCP
 
-* Install DHCP server: `sudo apt-get install isc-dhcp-server`
+* Install DHCP server: `sudo apt install isc-dhcp-server`
 * Put contents of `networking/host/dhcpd.conf` in `/etc/dhcp/dhcpd.conf`
 * Edit `/etc/default/isc-dhcp-server` and set INTERFACESv4="wlan0" and INTERFACESv6="wlan0"
 
 #### Host AP
 
-* Install the AP server: `sudo apt-get install hostapd`
+* Install the AP server: `sudo apt install hostapd`
 * Put the contents of `networking/host/hostapd.conf` in `/etc/hostapd/hostapd.conf`
 * Change the # for the passphrase for the network
 * Edit `/etc/default/hostapd` and point DAEMON_CONF to `/etc/hostapd/hostapd.conf`

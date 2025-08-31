@@ -6,7 +6,8 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
 
 ## Image
 
-* Download Raspbian image, no need to unzip * [image download page](https://www.raspberrypi.org/downloads/)
+* Download Raspbian image, no need to unzip
+  * [Image download page](https://www.raspberrypi.org/downloads/)
 * Download [Etcher](https://www.balena.io/etcher/)
 * Plug in SD card
 * Etch the zip file directly to the SD card

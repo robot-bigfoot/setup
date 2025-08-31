@@ -20,7 +20,7 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
 
 * Plug into ethernet and screen
 * Raspberry pi setup will guide you through setting a username and password
-* Configure other system settings * `sudo raspi-config`
+* Configure other system settings: `sudo raspi-config`
   * Enable SSH
   * Set the hostname to be something sensible
   * ([Details](http://www.raspberrypi-spy.co.uk/2012/05/enable-secure-shell-ssh-on-your-raspberry-pi/))

@@ -25,7 +25,7 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
   * If not already there, make the file:
     * `mkdir  ~/.ssh`
     * `touch ~/.ssh/authorized_keys`
-  * `cat /home/username/name_rsa.pub >> /home/username/.ssh/authorized_keys
+  * `cat /home/username/name_rsa.pub >> /home/username/.ssh/authorized_keys`
 * Clean up the file in the home directory
 * You may wish to make it the default SSH key on your client / controller device by adding the below to `.ssh/config`:
   * `IdentityFile /home/username/.ssh/name_rsa`

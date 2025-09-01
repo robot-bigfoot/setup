@@ -70,15 +70,11 @@ For each file, check for any # that need replacing
 * For the host network, put  the example from `networking/host/WiFiHost.nmconnection` in `/etc/NetworkManager/system-connections`
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
-NetworkManager instead of old stack kinda documented [here](https://raspberrypi.stackexchange.com/a/145594)
-
-#### DHCP
-
-* Install DHCP server: `sudo apt install isc-dhcp-server`
-* Put contents of `networking/host/dhcpd.conf` in `/etc/dhcp/dhcpd.conf`
-* Edit `/etc/default/isc-dhcp-server` and set INTERFACESv4="wlan0" and INTERFACESv6="wlan0"
+Sometimes the internet won't be forwarded, NetworkManager has probably failed to create the firewall rules for you (the output of `sudo nft list ruleset` is empty). In this case, bring your host WiFi back up with `sudo nmcli connection up #` (where # is the connection name you configured) and check the ruleset list again and you should be good.
 
 Reboot machine: `sudo shutdown -r now`
+
+NetworkManager instead of old stack kinda documented [here](https://raspberrypi.stackexchange.com/a/145594)
 
 [raspi-config docs](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 

@@ -64,10 +64,10 @@ On all devices, install and set up the Github CLI:
 
 For each file, check for any # that need replacing
 
-* Put the contents of `networking/host/iptables.conf` in `/etc/iptables.conf`
-* For each wifi you want to connect to, create a version of  `networking/host/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
+* Put the contents of `host/iptables.conf` in `/etc/iptables.conf`
+* For each wifi you want to connect to, create a version of  `host/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
-* For the host network, put  the example from `networking/host/WiFiHost.nmconnection` in `/etc/NetworkManager/system-connections`
+* For the host network, put  the example from `host/WiFiHost.nmconnection` in `/etc/NetworkManager/system-connections`
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
 Sometimes the internet won't be forwarded, NetworkManager has probably failed to create the firewall rules for you (the output of `sudo nft list ruleset` is empty). In this case, bring your host WiFi back up with `sudo nmcli connection up #` (where # is the connection name you configured) and check the ruleset list again and you should be good.
@@ -81,7 +81,7 @@ NetworkManager instead of old stack kinda documented [here](https://raspberrypi.
 ### Client
 
 * Run `ifconfig` to check you have wlan0
-* For each wifi you want to connect to, create a version of  `networking/client/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
+* For each wifi you want to connect to, create a version of  `client/WiFiNetwork.nmconnection` in `/etc/NetworkManager/system-connections`
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
 Reboot machine: `sudo shutdown -r now`

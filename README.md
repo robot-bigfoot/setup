@@ -29,6 +29,7 @@ Loosely based on [previous robot version](https://github.com/AmoebaThree/Raspber
 * Clean up the file in the home directory
 * You may wish to make it the default SSH key on your client / controller device by adding the below to `.ssh/config`:
   * `IdentityFile /home/username/.ssh/name_rsa`
+* You may wish to repeat this process on the WiFi network host node so you can more easily jump to the other nodes.
 
 ## First  boot
 

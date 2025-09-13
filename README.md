@@ -99,3 +99,6 @@ Some useful commands:
 
 * `nmcli device` - show network devices (and for  wifi, what they are connected to)
 * `sudo shutdown -h now` - shut down the device
+* To update:
+  * `sudo apt update` - to update package lists
+  * `sudo apt full-upgrade` - to update packages

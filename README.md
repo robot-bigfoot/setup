@@ -73,6 +73,8 @@ For each file, check for any # that need replacing
 
 Sometimes the internet won't be forwarded, NetworkManager has probably failed to create the firewall rules for you (the output of `sudo nft list ruleset` is empty). In this case, bring your host WiFi back up with `sudo nmcli connection up #` (where # is the connection name you configured) and check the ruleset list again and you should be good.
 
+Alternatively use a variant of the `network-startup` service from [here](https://github.com/robot-bigfoot/network-startup).
+
 Reboot machine: `sudo shutdown -r now`
 
 NetworkManager instead of old stack kinda documented [here](https://raspberrypi.stackexchange.com/a/145594)
@@ -86,6 +88,10 @@ NetworkManager instead of old stack kinda documented [here](https://raspberrypi.
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
 Reboot machine: `sudo shutdown -r now`
+
+## Services
+
+You may wish to create services for the robot using the [template](https://github.com/robot-bigfoot/service-template-repo).
 
 ## Reminders
 

@@ -86,3 +86,10 @@ NetworkManager instead of old stack kinda documented [here](https://raspberrypi.
   * You **MUST** chmod these to 600 or NetworkManager will ignore them
 
 Reboot machine: `sudo shutdown -r now`
+
+## Reminders
+
+Some useful commands:
+
+* `nmcli device` - show network devices (and for  wifi, what they are connected to)
+* `sudo shutdown -h now` - shut down the device

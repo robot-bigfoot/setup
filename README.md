@@ -97,7 +97,11 @@ You may wish to create services for the robot using the [template](https://githu
 
 Some useful commands:
 
-* `nmcli device` - show network devices (and for  wifi, what they are connected to)
+* NetworkManager:
+  * `nmcli device` - show network devices (and for  wifi, what they are connected to)
+  * `nmcli dev wifi list` - show available wifi networks
+  * `nmcli con show` - show connections
+  * `nmcli con [up|down] [connection]` - up or down wifi by connection name
 * `sudo shutdown -h now` - shut down the device
 * To update:
   * `sudo apt update` - to update package lists

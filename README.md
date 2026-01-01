@@ -101,4 +101,6 @@ Some useful commands:
 * `sudo shutdown -h now` - shut down the device
 * To update:
   * `sudo apt update` - to update package lists
-  * `sudo apt full-upgrade` - to update packages
+  * `sudo apt upgrade` - upgrade packages
+  * `sudo apt full-upgrade` - to upgrade packages
+  * `sudo apt autoremove` - tidy up unused packages
